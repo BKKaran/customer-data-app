@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>the express app</title>
+</head>
+<body>
+    {{>header}}
+    
+    <form action="/users" method="POST">
+        <label for="">name</label>
+    
+        <input style="margin-left: 5px" type="text" Name="first_name">
+        <br><br>
+        <label for="">Email</label>
+        <input type="text" name="email">
+        <br><br>
+        <input style="margin-left: 80px" type="submit" name="" id="" value="ADD">
+    </form>
+    <br><br><br>
+
+    {{#each users as |user|}}
+    <li style="margin-left: 50px; list-style: none">{{user.name}}::{{user.email}} </li>
+    {{/each}}
+
+    {{>footer}}
+
+</body>
+</html>
+
+
